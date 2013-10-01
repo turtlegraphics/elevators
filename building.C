@@ -8,6 +8,8 @@
  *
  *  v4.2 9/13
  *       Moving to a single elevators executable, rather than three.
+ *       -h command line help.
+ *       ElevatorMachinery::getid() function
  *  v4.1 9/08
  *       Fixing g++ compiler warning.
  *  v4.0 10/06
@@ -134,7 +136,7 @@ main(int argc,char *argv[])
   double speed = .3;
 
   char opt;
-  while ((opt = getopt(argc,argv,"gs:e:")) != -1)
+  while ((opt = getopt(argc,argv,"hgs:e:")) != -1)
     switch (opt) {
     case 'g':
       graphics = true;
@@ -145,6 +147,7 @@ main(int argc,char *argv[])
     case 'e':
       nelev = atoi(optarg);
       break;
+    case 'h':
     default:
       usage(argv[0]);
     }
@@ -333,6 +336,8 @@ ElevatorMachinery::ElevatorMachinery()
   door_status = false;
 }
 
+int ElevatorMachinery::getid() const {return id;}
+  
 //
 // Elevator display functions
 //
@@ -347,7 +352,7 @@ void ElevatorMachinery::display()
   else
     cout << "nobody)";
 }
-  
+
 void ElevatorMachinery::message(const char *s)
   // Generate a message for this elevator on the screen
   // This is the approved method for Elevator objects to output information

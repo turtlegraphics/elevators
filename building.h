@@ -24,6 +24,8 @@ class ElevatorMachinery {
  public:
   ElevatorMachinery();
 
+  int getid() const;                   // unique ID for this elevator
+
   //
   // Elevator display functions
   //
