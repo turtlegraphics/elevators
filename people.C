@@ -9,6 +9,7 @@
 #include <iostream>
 #include <sstream>
 #include <time.h>
+#include <stdlib.h>
 using namespace std;
 
 #define MAXFLOOR 10
@@ -76,7 +77,7 @@ void make_person(string name, int trips, int delaymax) {
 // usage
 //   Print a usage error message
 //
-void usage(char *name, char *err = NULL)
+void usage(char *name, const char *err = NULL)
 {
   cerr << "usage: " << name << " [-p people] [-t trips] [-d delaymax]"
        << endl;
