@@ -279,17 +279,18 @@ while 1:
     elif token[0]=="F":
         # Finish line
         # Syntax: F <message>
-        fbox = Rectangle(220,70,Point(110,35))
+        w = building.getWidth()
+        h = FLOORHEIGHT * 3
+        fbox = Rectangle(w-4,h-4,Point(w/2,h/2))
         fbox.setFillColor('white')
         fbox.setBorderColor('green')
         fbox.setDepth(-1)
         building.add(fbox)
         results = Text(line[3:] + "\nWarnings: " + `warning_count`)
-        results.moveTo(10,10)
+        results.moveTo(w/2,h/2)
         results.setDepth(-2)
         results.setFontSize(24)
         building.add(results)
-        time.sleep(5)
         sys.exit()
         
     else:
