@@ -52,7 +52,7 @@ For example,
 
 `people.py -p3 -t8 -d10 | elevators`
 
-will generate 3 people, each of which takes 8 tripsand works for up to 10 ticks between trips, then pipe the output into elevators.
+will generate 3 people, each of which takes 8 trips and works for up to 10 ticks between trips, then pipe the output into elevators.
 
 graphics
 --------
