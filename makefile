@@ -21,9 +21,5 @@ elevators: $(esources) $(eheaders) building.o
 building.o: building.h building.C elevators.h
 	$(CXX) $(CXXFLAGS) -c building.C -o $@
 
-# People utility program
-people: people.C
-	$(CXX) $(CXXFLAGS) people.C -o people
-
 clean:
-	rm -f building.o elevators people
+	rm -f building.o elevators
