@@ -1,7 +1,7 @@
 elevators
 =========
 
-Multithreaded elevator simulation for Saint Louis University CS 324 Operating Systems.
+Multithreaded elevator simulation for Saint Louis University CS 3500 Operating Systems.
 
 basic operation
 ---------------
@@ -22,7 +22,6 @@ options
 * `-g`: Use output formatted for graphics, see below.
 
 Each event that occurs in the simulation will be indicated by one line of output.
-The `-g` option changes the output so it may be fed into the graphics display, see below.
 
 person records
 --------------
@@ -37,17 +36,23 @@ work for `worktime1`, then proceed to `floor2` and so on until `floorN`, where t
 for `worktimeN` and then take an elevator to the first floor to exit.
 
 ### .eld files
-There are a few `.eld` files in the distribution for testing.  You might run the program:
+There are a few `.eld` files in the distribution for testing.  You might run the program with:
+
  `elevators < oneguy.eld`
+
 to direct the `oneguy.eld` file to elevators standard input.
 
 ### people generator
-There is a utility program `people.C` that will generate random person records.
-Usage:
- `people [-p people] [-t trips] [-d delaymax]`
+There is a utility program `people.py` that will generate random person records.
 
-For example, `people -p3 -t8 -d10` will generate 3 people, each of which takes 8 trips
-and works for up to 10 ticks between trips.
+Usage:
+ `people.py [-p people] [-t trips] [-d delaymax]`
+
+For example,
+
+`people.py -p3 -t8 -d10 | elevators`
+
+will generate 3 people, each of which takes 8 tripsand works for up to 10 ticks between trips, then pipe the output into elevators.
 
 graphics
 --------
@@ -59,6 +64,8 @@ of `egraphics.py` with a pipe.  For example,
 
 assignment
 ----------
-This is an assignment in CS 324 at Saint Louis University.  As such, the simulation
-does not actually work yet.  The assignment is available at:
+This is an assignment for CS 3500 at Saint Louis University.
+As such, the simulation does not actually work yet.
+
+The assignment is available at:
 http://mathcs.slu.edu/~clair/os
