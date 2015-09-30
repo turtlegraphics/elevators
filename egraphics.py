@@ -195,7 +195,7 @@ def warn(msg):
     "Display a warning message, keeping count of number of warnings"
     global warning_count
     warning_count += 1
-    warning_display.setText(`warning_count` + ' ' + msg)
+    warning_display.setMessage(`warning_count` + ' ' + msg)
     print "WARNING",msg
 
 # Utility functions
