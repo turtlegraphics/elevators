@@ -42,6 +42,7 @@
 #include <pthread.h>
 #include <errno.h>
 #include <math.h>
+#include <unistd.h>
 
 #include "building.h"
 #include "elevators.h"
