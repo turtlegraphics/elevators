@@ -10,6 +10,7 @@
 #include <sstream>
 #include <time.h>
 #include <stdlib.h>
+#include <unistd.h>
 using namespace std;
 
 #define MAXFLOOR 10
